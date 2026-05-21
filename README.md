@@ -1,16 +1,7 @@
-# React + Vite
+# 방탈출 룸익스케이프 스스로를 위한 마감 체크리스트 
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 각 테마/위치마가 카테고리 작성
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
-
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+26.05.21 수정사항
+- 각 카테고리별로 전체선택/해제 생성
+- 항목 누락하고 최종마감시 빠진 항목으로 자동이동 (팝업보여주기) 
