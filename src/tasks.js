@@ -31,7 +31,7 @@ export const initialTasks = [
     { id: 24, step: 3, category: "마카오", subCategory: "장비 종료", text: "두번째 방 티비 종료하기" },
     { id: 25, step: 3, category: "마카오", subCategory: "자물쇠 잠그기", text: "첫방 번호 맞추기, 빨간 자물쇠 (턴테이블)" },
     { id: 26, step: 3, category: "마카오", subCategory: "자물쇠 잠그기", text: "두번째방 벽장 1개" },
-    { id: 27, step: 3, category: "마카오", subCategory: "자물쇠 잠그기", text: "마지막방 캐비닛 1개 (가방 제외 총 4개)" },
+    { id: 27, step: 3, category: "마카오", subCategory: "자물쇠 잠그기", text: "마지막방 캐비닛 1개" },
     { id: 28, step: 3, category: "마카오", subCategory: "장비 종료", text: "힌트폰 꺼내기" },
     { id: 29, step: 3, category: "마카오", subCategory: "장비 종료", text: "에어컨 송풍 전환" },
   
@@ -60,7 +60,7 @@ export const initialTasks = [
     { id: 49, step: 5, category: "레테", subCategory: "자물쇠 잠그기", text: "와인&명함" },
     { id: 50, step: 5, category: "레테", subCategory: "자물쇠 잠그기", text: "책" },
     { id: 51, step: 5, category: "레테", subCategory: "자물쇠 잠그기", text: "시간 시계는 열어두기" },
-    { id: 52, step: 5, category: "레테", subCategory: "자물쇠 잠그기", text: "열쇠 시계는 닫기" },
+    { id: 52, step: 5, category: "레테", subCategory: "자물쇠 잠그기", text: "자물쇠 시계는 닫기" },
     { id: 53, step: 5, category: "레테", subCategory: "자물쇠 잠그기", text: "JACK" },
     { id: 54, step: 5, category: "레테", subCategory: "자물쇠 잠그기", text: "941생" },
     { id: 55, step: 5, category: "레테", subCategory: "장비 종료", text: "에어컨 송풍 전환" },
