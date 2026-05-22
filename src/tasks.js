@@ -105,9 +105,9 @@ export const initialTasks = [
   { id: 90, step: 7, category: "매장정산", subCategory: "다음날 구글시트", text: "시트 내 날짜/요일 수정" },
   { id: 91, step: 7, category: "매장정산", subCategory: "다음날 구글시트", text: "남은 대기 예약 상황 시트로 이관" },
   { id: 92, step: 7, category: "매장정산", subCategory: "다음날 구글시트", text: "다음날 예약자 안내 문자 발송" },
-  { id: 93, step: 7, category: "매장정산", subCategory: "노트북 사진정리", text: "오늘 날짜의 사진 폴더 생성" },
-  { id: 94, step: 7, category: "매장정산", subCategory: "노트북 사진정리", text: "촬영된 사진 폴더로 이동 후 기존 컴퓨터 내 원본 삭제" },
-  { id: 95, step: 7, category: "매장정산", subCategory: "노트북 사진정리", text: "포토샵 템플릿 날짜 익일로 변경 후 저장" },
+  { id: 93, step: 7, category: "매장정산", subCategory: "사진정리", text: "오늘 날짜의 사진 폴더 생성" },
+  { id: 94, step: 7, category: "매장정산", subCategory: "사진정리", text: "촬영된 사진 폴더로 이동 후 기존 컴퓨터 내 원본 삭제" },
+  { id: 95, step: 7, category: "매장정산", subCategory: "사진정리", text: "포토샵 템플릿 날짜 익일로 변경 후 저장" },
 
   // --- 8단계: 최종 최종 마감 ---
   { id: 96, step: 8, category: "최종보안", subCategory: "PC/CCTV 종료", text: "상황실 CCTV 모니터 및 녹화기 종료 (총 2개)" },
