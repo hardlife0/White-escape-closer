@@ -41,7 +41,7 @@ export const initialTasks = [
 
   // --- 4단계: 알비노 ---
   { id: 34, step: 4, category: "알비노", subCategory: "모니터 종료", text: "힌트 모니터 종료" },
-  { id: 35, step: 4, category: "알비노", subCategory: "모니터 종료", text: "선반에 있는 모니 2개 종료" },
+  { id: 35, step: 4, category: "알비노", subCategory: "모니터 종료", text: "선반에 있는 모니터 2개 종료" },
   { id: 36, step: 4, category: "알비노", subCategory: "모니터 종료", text: "뒷방 엔딩 모니터 1개 종료" },
   { id: 37, step: 4, category: "알비노", subCategory: "서랍 열어두기", text: "F, E, D 서랍 열어두기 (3개)" },
   { id: 38, step: 4, category: "알비노", subCategory: "마그네틱 열어두기", text: "SSCP 문" },
