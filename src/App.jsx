@@ -1,7 +1,7 @@
 // src/App.jsx
 import React, { useState } from 'react';
 import { initialTasks } from './tasks';
-// 💡 assets 폴더 안의 이미지 임포트
+// 💡 이미지 파일명이 영문(각방힌트코드.png)으로 변경되었다고 가정합니다.
 import answerKeyImage from './assets/각방정답코드.png';
 
 export default function App() {
@@ -79,7 +79,7 @@ export default function App() {
           <div className="flex items-center gap-1.5 mt-0.5">
             <h2 className="text-xl font-bold text-slate-800 mr-1">{currentCategoryTitle}</h2>
             
-            {/* 💡 상단 가이드 및 정답표 버튼 묶음 (6, 7, 8단계가 아닐 때만 노출) */}
+            {/* 💡 상단 가이드 및 정답표 버튼 (6, 7, 8단계가 아닐 때만 노출) */}
             {step <= 5 && (
               <div className="flex gap-1">
                 <button
@@ -94,7 +94,6 @@ export default function App() {
                   ❓ 가이드
                 </button>
                 
-                {/* 📸 새로 추가된 정답 이미지 팝업 버튼 */}
                 <button
                   onClick={() => {
                     setIsImageModalOpen(true);
@@ -267,13 +266,13 @@ export default function App() {
         </div>
       )}
 
-      {/* 💡 새로 추가된 [📸 정답표] 이미지 전용 팝업 모달 */}
+      {/* 📸 정답표 이미지 전용 팝업 모달 */}
       {isImageModalOpen && (
-        <div className="fixed inset-0 bg-black/80 flex items-center justify-center p-4 z-50 animate-fade-in">
+        <div className="fixed inset-0 bg-black/80 flex items-center justify-center p-4 z-50">
           <div className="bg-white w-full max-w-sm rounded-3xl overflow-hidden shadow-2xl flex flex-col max-h-[85vh]">
             
-            {/* 상단바 */}
-            <div className="bg-slate-900 text-white p-4 flex justify-between items-center">
+            {/* 상단바 (고정) */}
+            <div className="bg-slate-900 text-white p-4 flex justify-between items-center flex-shrink-0 z-20">
               <h3 className="font-extrabold text-base flex items-center gap-1.5">
                 📸 각 방 정답코드 스크린샷
               </h3>
@@ -285,28 +284,39 @@ export default function App() {
               </button>
             </div>
 
-            {/* 이미지 영역 (가운데 정렬 및 확대 유도 캡션) */}
-            <div className="flex-1 bg-slate-950 flex flex-col items-center justify-center p-3 overflow-hidden relative">
-              <p className="text-[11px] text-slate-400 mb-2 select-none">
-                🔍 작은 글씨는 이미지를 터치하면 크게 확대됩니다.
-              </p>
-              
+            {/* 캡션 영역 */}
+            {!isZoomed && (
+              <div className="bg-slate-950 text-center p-2.5 border-b border-slate-800 flex-shrink-0 z-10">
+                <p className="text-[11px] text-slate-400 select-none">
+                  🔍 글씨가 작나요? 이미지를 <span className='text-sky-300 font-bold'>터치</span>하면 1.5배 크게 확대됩니다.
+                </p>
+              </div>
+            )}
+
+            {/* 이미지 스크롤 및 확대 영역 (위/왼쪽 잘림 완전 방지) */}
+            <div 
+              className={`flex-1 bg-slate-950 p-2 overflow-hidden relative ${
+                isZoomed ? 'cursor-zoom-out' : 'cursor-zoom-in'
+              }`}
+              onClick={() => setIsZoomed(!isZoomed)}
+            >
               <div 
-                className="w-full h-full flex items-center justify-center overflow-auto cursor-zoom-in"
-                onClick={() => setIsZoomed(!isZoomed)}
+                className={`w-full h-full ${isZoomed ? 'overflow-auto' : 'flex items-center justify-center'} scrollbar-thin scrollbar-thumb-slate-700`}
               >
                 <img 
                   src={answerKeyImage} 
                   alt="각방 정답코드" 
-                  className={`rounded-lg object-contain max-h-[55vh] transition-all duration-200 ${
-                    isZoomed ? 'scale-150 max-h-none my-12' : 'scale-100'
+                  className={`rounded-xl object-contain h-auto transition-all duration-300 ${
+                    isZoomed 
+                      ? 'w-[150%] max-w-none max-h-none py-10 px-4 origin-top-left' 
+                      : 'w-full max-h-[55vh]' 
                   }`}
                 />
               </div>
             </div>
 
-            {/* 하단 푸터 닫기 */}
-            <div className="bg-slate-50 border-t border-slate-200 p-3.5">
+            {/* 하단 푸터 닫기 (고정) */}
+            <div className="bg-slate-50 border-t border-slate-200 p-3.5 flex-shrink-0 z-20">
               <button
                 onClick={() => setIsImageModalOpen(false)}
                 className="w-full bg-slate-800 hover:bg-slate-900 text-white font-bold py-3 rounded-xl transition text-sm"
