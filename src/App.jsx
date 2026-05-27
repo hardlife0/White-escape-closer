@@ -23,19 +23,19 @@ export default function App() {
             Escape Room Closer
           </span>
           <h1 className="text-4xl font-extrabold tracking-tight">
-            방탈출 카페
+            룸익스케이프 화이트
             <br />
-            마감 체크리스트
+            참고 메뉴얼
           </h1>
           <p className="text-slate-400 text-sm">
-            매일 안전하고 깔끔한 마감을 위해 단계를 진행해 주세요.
+            도움이 필요하시면 참고해주세요!
           </p>
         </div>
         <button
           onClick={() => setStep(1)}
           className="w-full max-w-sm bg-emerald-500 hover:bg-emerald-600 active:scale-95 text-slate-950 font-bold py-5 rounded-2xl shadow-xl shadow-emerald-500/20 transition-all text-xl"
         >
-          마감 작업 시작하기 🚀
+          마감 작업 체크리스트 🚀
         </button>
       </div>
     );
